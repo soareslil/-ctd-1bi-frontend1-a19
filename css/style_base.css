@@ -28,13 +28,11 @@ header .logo {
     margin-left: 20px;
 }
 
-/** Menú principal */
+/** Menu principal */
 nav ul {
     display: flex; 
     justify-content: center;
     list-style: none;
-    /* padding: 0px;
-    margin-left: 10px;          NO son necesarias porque usamos flex*/
 }
 nav ul li {
     margin: 20px;
@@ -44,26 +42,29 @@ nav ul li a{
     margin:15px;
     font-size:25px;  
     color:var(--secondary-color);
-    text-decoration: none;
+    text-decoration: none;    
 }
 
-nav ul li a:before{
+nav ul li a::before{
     content:'';
     background: var(--decoration-color);
     position:absolute;
-    bottom:-10px; 
-    /* alto y ancho=0 */
-    /* transition: ; */
-}
-nav ul li a:hover::before{
-    /* ancho final */
-}
+    bottom:-10px;
+    height:5px;
 
-/* Barra redes */
+    /*dica: width iniciando em 0 e aplicação de uma transição*/
+  }
+  
+  nav ul li a:hover::before{
+   /*dica: width 100*/
+  }
+  
+
+/* Barra redes sociais*/
 .social {
 	position: fixed; 
 	left: 0; 
-	top: calc(50% - 90px); /* Para que quede centrada le decimos que al 50% del alto le reste la mitad del alto de la barra: 16px de la letra + 10 padding-top + 10padding-bottom */
+	top: calc(50% - 90px); 
 	z-index: 2000; 
 }
 .social ul {
@@ -71,7 +72,7 @@ nav ul li a:hover::before{
 }
 
 .social ul li a {
-    display: inline-block; /* porque le quiero agregar padding */
+    display: inline-block; 
     color:var(--secondary-color);
     background: var(--primary-color);
     padding: 10px 15px;
@@ -79,7 +80,7 @@ nav ul li a:hover::before{
     /* transition: ; */
 }
 
-.social ul li .icon-facebook {background:#3b5998;} /* Establecemos los colores de cada red social, aprovechando su class */
+.social ul li .icon-facebook {background:#3b5998;} 
 .social ul li .icon-twitter {background: #00abf0;}
 .social ul li .icon-instagram {background: #E4405F;}
 .social ul li .icon-whatsapp {background: #25D366;}
@@ -87,11 +88,10 @@ nav ul li a:hover::before{
 
 .social ul li a:hover{
     /* transform: ; */
-    /* padding: ; */
 }
 
 
-  /* Contenido */
+  /* Conteudo */
 .container{
     width: 80%;
     margin: 5% auto;
@@ -131,6 +131,7 @@ nav ul li a:hover::before{
     border-left: 10px solid rgba(66,139,202,.2);
      /* animation: ; */
  }
-/* keyframes
-    crear la animación con la rotación desde el momento 0 y momento 100
+ 
+/* keyframes    
+    crie a animação com a rotação do tempo 0 ao tempo 100
  */
