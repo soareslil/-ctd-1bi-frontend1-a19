@@ -90,7 +90,10 @@ nav ul li a::before{
 .social ul li .icon-mail {background: #666666;}
 
 .social ul li a:hover{
-    /* transform: ; */
+    transform: scalex(3px);
+    animation: scale-up-hor-left 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    padding-right: 30px;
+    padding-right: 30px;
 }
 
 
@@ -162,3 +165,13 @@ nav ul li a::before{
       transform-origin: 0% 0%;
     }
   }
+
+  @keyframes slide-fwd-right {
+    0% {
+      transform: translateZ(0) translateX(0);
+    }
+    100% {
+      transform: translateZ(160px) translateX(100px);
+    }
+  }
+  
